@@ -13,5 +13,5 @@ export default defineConfig({
       images: "/src/images",
     },
   },
-  base: "/car-rental-app/",
+  base: "/car-rental-app",
 });
