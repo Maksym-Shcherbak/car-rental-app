@@ -27,6 +27,12 @@ export const Modal = ({ children }) => {
       document.removeEventListener("keydown", handleEscapeKey);
     };
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => (document.body.style.overflow = "unset");
+  }, []);
+
   return isOpen ? (
     <Backdrop onClick={handleBackdropClick}>
       <ModalWindow>
