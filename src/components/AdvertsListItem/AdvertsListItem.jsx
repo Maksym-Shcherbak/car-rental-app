@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { openModal } from "../../redux/modal/modalSlice";
 import {
   AdvertButton,
   AdvertInfo,
@@ -10,6 +12,7 @@ import {
 } from "./AdvertsListItem.styled";
 
 export const AdvertListItem = ({ src, make, year, price }) => {
+  const dispatch = useDispatch();
   return (
     <GridItem>
       <ImageWrapper>
@@ -22,7 +25,9 @@ export const AdvertListItem = ({ src, make, year, price }) => {
           </AdvertTitle>
           <AdvertPrice>{price}</AdvertPrice>
         </TitleAndPriceWrapper>
-        <AdvertButton>Learn more</AdvertButton>
+        <AdvertButton onClick={() => dispatch(openModal())}>
+          Learn more
+        </AdvertButton>
       </AdvertInfo>
     </GridItem>
   );

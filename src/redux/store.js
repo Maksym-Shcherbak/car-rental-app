@@ -12,6 +12,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { advertsReducer } from "./rental/cars/carsSlice";
+import { modalReducer } from "./modal/modalSlice";
 
 // import { devToolsEnhancer } from "@redux-devtools/extension";
 
@@ -25,6 +26,7 @@ const persistConfig = {
 export const store = configureStore({
   reducer: {
     adverts: persistReducer(persistConfig, advertsReducer),
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

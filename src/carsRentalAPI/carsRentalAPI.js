@@ -12,6 +12,7 @@ export class carsRentalAPI {
     });
     try {
       const response = await axios(`${this.#BASE_URL}adverts?${searchParams}`);
+      console.log(response);
       return response.data;
     } catch (error) {
       console.log(error);

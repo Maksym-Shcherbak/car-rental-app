@@ -49,11 +49,12 @@ export const AdvertPrice = styled.h3`
 
 export const AdvertButton = styled.button`
   border-radius: 12px;
-  padding: 12px 99px;
+  padding: 12px 99.5px;
   background: #3470ff;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.42857;
   color: #fff;
+  border: none;
 `;
