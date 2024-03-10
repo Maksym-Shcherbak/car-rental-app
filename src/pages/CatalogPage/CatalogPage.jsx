@@ -51,7 +51,6 @@ const CatalogPage = () => {
   }, [dispatch, make]);
 
   useEffect(() => {
-    console.log(currentPage);
     dispatch(getAllAdverts({ currentPage, limit, make }));
   }, [dispatch, currentPage, limit, make]);
 
