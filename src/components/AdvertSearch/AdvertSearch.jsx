@@ -1,12 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { CustomSelect } from "../Select/Select";
-import { SearchContainer } from "./AdvertSearch.styled";
-import { selectMakes } from "../../redux/filters/filtersSelectors";
+import { CustomLabel, SearchContainer } from "./AdvertSearch.styled";
+import { selectMake, selectMakes } from "../../redux/filters/filtersSelectors";
 import { setMake } from "../../redux/filters/filtersSlice";
 
 export const AdvertSeacrh = () => {
   const dispatch = useDispatch();
   const makes = useSelector(selectMakes);
+  const make = useSelector(selectMake);
+  const defaultValue = {
+    value: make,
+    label: make,
+  };
   const handleChangeMake = (e) => {
     if (e) {
       dispatch(setMake(e.value));
@@ -26,13 +31,14 @@ export const AdvertSeacrh = () => {
   return (
     <SearchContainer>
       <div>
-        <label htmlFor="makes">Car brand</label>
+        <CustomLabel htmlFor="makes">Car brand</CustomLabel>
         <CustomSelect
           id={"makes"}
           options={makesOptions}
           onChange={handleChangeMake}
           placeholder={"Enter the text"}
           isClearable={true}
+          value={defaultValue}
         />
       </div>
     </SearchContainer>

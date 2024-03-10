@@ -97,15 +97,17 @@ export const CustomSelect = ({
   placeholder,
   isClearable,
   id,
+  value,
 }) => {
   return (
     <Select
+      defaultValue={value}
       options={options}
       onChange={onChange}
       styles={customStyles}
       placeholder={placeholder}
       isClearable={isClearable}
-      id={id}
+      inputId={id}
     />
   );
 };

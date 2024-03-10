@@ -8,3 +8,12 @@ export const SearchContainer = styled.div`
     flex-direction: column;
   }
 `;
+
+export const CustomLabel = styled.label`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #8a8a89;
+  text-align: left;
+  margin-bottom: 8px;
+`;
