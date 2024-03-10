@@ -1,0 +1,1 @@
+import{b as t,c as r,d as n,r as d,j as s}from"./index-CXgrFzWv.js";import{c,f as l,S as i,A as v,M as x,g as f}from"./Section.styled-sJWDhcbi.js";const p=()=>{const a=t(r),o=t(n),e=t(c);return d.useEffect(()=>{l(e)}),s.jsx(s.Fragment,{children:s.jsxs(i,{children:[s.jsx(v,{adverts:e}),a&&s.jsx(x,{children:s.jsx(f,{data:o})})]})})};export{p as default};
