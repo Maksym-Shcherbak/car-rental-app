@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const GridItem = styled.li`
+  position: relative;
   border-radius: 14px;
 `;
 
 export const ImageWrapper = styled.div`
   border-radius: 14px;
-  max-width: 274px;
+  min-width: 274px;
   height: 268px;
   margin-bottom: 14px;
   overflow: hidden;
@@ -57,4 +58,25 @@ export const AdvertButton = styled.button`
   line-height: 1.42857;
   color: #fff;
   border: none;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background: #0b44cd;
+  }
+`;
+
+export const FavoriteButton = styled.button`
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  pointer-events: auto;
+  overflow: hidden;
 `;

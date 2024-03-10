@@ -1,11 +1,8 @@
-import { useSelector } from "react-redux";
-import { selectAdverts } from "../../redux/rental/cars/carsSelectors";
+/* eslint-disable react/prop-types */
 import { AdvertListItem } from "../AdvertsListItem/AdvertsListItem";
 import { Grid } from "./AdvertsList.styled";
 
-export const AdvertsList = () => {
-  const adverts = useSelector(selectAdverts);
-  console.log(adverts);
+export const AdvertsList = ({ adverts }) => {
   return (
     <Grid>
       {adverts.map((advert) => {
@@ -16,6 +13,8 @@ export const AdvertsList = () => {
             make={advert.make}
             year={advert.year}
             price={advert.rentalPrice}
+            id={advert.id}
+            model={advert.model}
           />
         );
       })}

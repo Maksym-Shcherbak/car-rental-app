@@ -12,6 +12,7 @@ export const Backdrop = styled.div`
   bottom: 0;
   background-color: rgba(15, 15, 15, 0.6);
   display: block;
+  z-index: 10;
 `;
 
 export const ModalWindow = styled.div`
@@ -20,21 +21,27 @@ export const ModalWindow = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f8f9ff;
-  width: 335px;
+  max-width: 541px;
   max-height: 90vh;
-  padding: 40px 20px;
+  padding: 40px;
   border-radius: 20px;
+  text-align: left;
   overflow: hidden;
 `;
 
 export const CloseBtn = styled.button`
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 18px;
   right: 18px;
   background-color: transparent;
   padding: 0;
   border: none;
-  color: #f3f3f3;
+  color: rgba(18, 20, 23, 1);
   transition: transform 300ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
 
   &:hover,

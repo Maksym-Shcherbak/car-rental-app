@@ -5,7 +5,6 @@ export const Grid = styled.ul`
   max-width: calc(100vw - 256px);
   grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
   grid-gap: 50px 29px;
-  margin-top: 274px;
   margin-bottom: 30px;
   padding: 0;
   list-style: none;

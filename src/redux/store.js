@@ -13,12 +13,14 @@ import {
 import storage from "redux-persist/lib/storage";
 import { advertsReducer } from "./rental/cars/carsSlice";
 import { modalReducer } from "./modal/modalSlice";
+import { filtersReducer } from "./filters/filtersSlice";
 
 // import { devToolsEnhancer } from "@redux-devtools/extension";
 
 const persistConfig = {
   key: "adverts",
   storage,
+  whitelist: ["favoriteAdverts"],
 };
 
 // const enhancer = devToolsEnhancer();
@@ -27,6 +29,7 @@ export const store = configureStore({
   reducer: {
     adverts: persistReducer(persistConfig, advertsReducer),
     modal: modalReducer,
+    filters: filtersReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

@@ -1,46 +1,91 @@
 import { useEffect, useState } from "react";
-import reactLogo from "../../assets/react.svg";
-import viteLogo from "/vite.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { carsRentalAPI } from "../../carsRentalAPI/carsRentalAPI";
-import { getAllCars } from "../../redux/rental/cars/carsActions";
-import { getAllAdverts } from "../../redux/rental/cars/carsOperations";
+import {
+  getAllAdverts,
+  getTotalAdverts,
+} from "../../redux/rental/cars/carsOperations";
 import {
   selectAdverts,
+  selectFavoriteAdverts,
+  selectIsLoadMore,
+  selectIsLoading,
   selectLimit,
-  selectPage,
+  selectTotalAdverts,
 } from "../../redux/rental/cars/carsSelectors";
 import { AdvertsList } from "../../components/AdvertsList/AdvertsList";
 import { Modal } from "../../components/Modal/Modal";
-import { selectModal } from "../../redux/modal/modalSlice";
+import {
+  selectModalIsOpen,
+  selectModalModalContent,
+} from "../../redux/modal/modalSlice";
+import { resetAdverts, setIsLoadMore } from "../../redux/rental/cars/carsSlice";
+import { LoadMoreButton } from "../../components/LoadMoreButton/LoadMoreButton";
+import { AdvertModalContent } from "../../components/AdvertModalContent/AdvertModalContent";
+import { setFavorite } from "../../helpers/setFavorite";
+import { getMakes } from "../../redux/filters/filtersOperations";
+import { selectMake } from "../../redux/filters/filtersSelectors";
+import { AdvertSeacrh } from "../../components/AdvertSearch/AdvertSearch";
+import { Section } from "../../components/Section/Section.styled";
 
 const CatalogPage = () => {
-  //   const rentalAPI = new carsRentalAPI();
-  //   const cars = useSelector(getAllCars);
-  //   let rentalCars;
-  const [count, setCount] = useState(0);
-  //   const dispatch = useDispatch();
-  //   const fetchAllCars = async () => {
-  //     console.log(await rentalAPI.getAllCars());
-  //     rentalCars = await rentalAPI.getAllCars();
-  //   };
-  //   fetchAllCars();
-  //   useEffect(() => {
-  //     dispatch(getAllCars(rentalCars));
-  //   }, [dispatch, rentalCars]);
-  //   console.log(cars);
   const dispatch = useDispatch();
-  const currentPage = useSelector(selectPage);
+  const [currentPage, setCurrentPage] = useState(1);
   const limit = useSelector(selectLimit);
-  const isOpen = useSelector(selectModal);
-  console.log(isOpen);
+  const isOpen = useSelector(selectModalIsOpen);
+  const modalContent = useSelector(selectModalModalContent);
+  const isLoading = useSelector(selectIsLoading);
+  const adverts = useSelector(selectAdverts);
+  const favoriteAdverts = useSelector(selectFavoriteAdverts);
+  const totalAdverts = useSelector(selectTotalAdverts);
+  const isLoadMore = useSelector(selectIsLoadMore);
+  const make = useSelector(selectMake);
+
   useEffect(() => {
-    dispatch(getAllAdverts(currentPage, limit));
+    setFavorite(favoriteAdverts);
+  });
+
+  useEffect(() => {
+    setCurrentPage(1);
+    dispatch(resetAdverts());
+    dispatch(getTotalAdverts({ make }));
+  }, [dispatch, make]);
+
+  useEffect(() => {
+    console.log(currentPage);
+    dispatch(getAllAdverts({ currentPage, limit, make }));
+  }, [dispatch, currentPage, limit, make]);
+
+  useEffect(() => {
+    dispatch(getMakes());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (adverts.length !== 0 && totalAdverts) {
+      if (adverts.length < totalAdverts) {
+        dispatch(setIsLoadMore(true));
+        return;
+      }
+      dispatch(setIsLoadMore(false));
+    }
+  }, [dispatch, totalAdverts, adverts]);
+
+  const onChangePage = () => {
+    setCurrentPage(currentPage + 1);
+  };
   return (
     <>
-      <AdvertsList />
-      {isOpen && <Modal />}
+      <Section>
+        <AdvertSeacrh />
+        <AdvertsList adverts={adverts} />
+        {isOpen && (
+          <Modal>
+            <AdvertModalContent data={modalContent} />
+          </Modal>
+        )}
+        {isLoadMore && !isLoading && (
+          <LoadMoreButton onButtonClick={onChangePage} isLoading={isLoading} />
+        )}
+      </Section>
     </>
   );
 };
