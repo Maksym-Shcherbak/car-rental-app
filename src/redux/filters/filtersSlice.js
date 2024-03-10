@@ -3,7 +3,7 @@ import { getMakes } from "./filtersOperations";
 
 const filtersInitialState = {
   makes: [],
-  make: "",
+  make: null,
   error: null,
   isLoading: false,
 };

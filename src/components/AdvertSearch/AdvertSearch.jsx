@@ -8,10 +8,12 @@ export const AdvertSeacrh = () => {
   const dispatch = useDispatch();
   const makes = useSelector(selectMakes);
   const make = useSelector(selectMake);
-  const defaultValue = {
-    value: make,
-    label: make,
-  };
+  const defaultValue = make
+    ? {
+        value: make,
+        label: make,
+      }
+    : null;
   const handleChangeMake = (e) => {
     if (e) {
       dispatch(setMake(e.value));
