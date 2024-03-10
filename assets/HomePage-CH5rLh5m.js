@@ -1,4 +1,4 @@
-import{q as o,L as t,j as a}from"./index-DsYffhKY.js";const n=o.div`
+import{q as o,L as t,j as a}from"./index-DSyAHwlZ.js";const n=o.div`
   max-width: 800px;
   padding: 21px 10px;
   text-align: left;
