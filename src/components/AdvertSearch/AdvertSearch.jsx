@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPage } from "../../redux/rental/cars/carsSlice";
 import { CustomSelect } from "../Select/Select";
 import { SearchContainer } from "./AdvertSearch.styled";
 import { selectMakes } from "../../redux/filters/filtersSelectors";
@@ -11,7 +10,6 @@ export const AdvertSeacrh = () => {
   const handleChangeMake = (e) => {
     if (e) {
       dispatch(setMake(e.value));
-      dispatch(setPage(1));
       return;
     }
     dispatch(setMake(null));
