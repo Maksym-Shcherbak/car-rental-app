@@ -4,7 +4,6 @@ import { getAllAdverts, getTotalAdverts } from "./carsOperations";
 const advertsInitialState = {
   adverts: [],
   favoriteAdverts: [],
-  page: 1,
   limit: 12,
   isLoading: false,
   error: null,
@@ -25,9 +24,6 @@ const advertsSlice = createSlice({
   name: "adverts",
   initialState: advertsInitialState,
   reducers: {
-    setPage(state, action) {
-      state.page = action.payload;
-    },
     resetAdverts(state) {
       state.adverts = [];
     },
@@ -62,10 +58,5 @@ const advertsSlice = createSlice({
 
 export const advertsReducer = advertsSlice.reducer;
 
-export const {
-  setPage,
-  resetAdverts,
-  addFavorite,
-  removeFromFavorite,
-  setIsLoadMore,
-} = advertsSlice.actions;
+export const { resetAdverts, addFavorite, removeFromFavorite, setIsLoadMore } =
+  advertsSlice.actions;

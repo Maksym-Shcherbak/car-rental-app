@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Backdrop, CloseBtn, ModalWindow } from "./Modal.styled";
 import { IoCloseSharp } from "react-icons/io5";
 import { closeModal, selectModalIsOpen } from "../../redux/modal/modalSlice";
-import { createPortal } from "react-dom";
 import { useEffect } from "react";
 
 export const Modal = ({ children }) => {
