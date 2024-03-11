@@ -27,6 +27,7 @@ import { selectMake } from "../../redux/filters/filtersSelectors";
 import { AdvertSeacrh } from "../../components/AdvertSearch/AdvertSearch";
 import { Section } from "../../components/Section/Section.styled";
 import { Loader } from "../../components/Loader/Loader";
+import { toastSuccess } from "../../helpers/notification";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -65,6 +66,7 @@ const CatalogPage = () => {
         dispatch(setIsLoadMore(true));
         return;
       }
+      toastSuccess(`You've reached the end`);
       dispatch(setIsLoadMore(false));
     }
   }, [dispatch, totalAdverts, adverts]);

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toastError } from "../helpers/notification";
 
 export class carsRentalAPI {
   #BASE_URL = "https://65e8b04a4bb72f0a9c50243e.mockapi.io/api/v1/";
@@ -12,7 +13,7 @@ export class carsRentalAPI {
       });
       return response.data;
     } catch (error) {
-      console.log(error);
+      toastError(`Sorry, ${error.message}, try later`);
     }
   }
   async getTotalAdverts(make) {
@@ -22,7 +23,7 @@ export class carsRentalAPI {
       });
       return response.data;
     } catch (error) {
-      console.log(error);
+      toastError(`Sorry, ${error.message}, try later`);
     }
   }
 
@@ -31,7 +32,7 @@ export class carsRentalAPI {
       const response = await axios(`${this.#BASE_URL}makes`);
       return response.data;
     } catch (error) {
-      console.log(error);
+      toastError(`Sorry, ${error.message}, try later`);
     }
   }
 

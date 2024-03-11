@@ -31,6 +31,7 @@ import {
   ModalContentList,
   ModalListContent,
 } from "../AdvertModalContent/AdvertModalContent.styled";
+import { toastSuccess } from "../../helpers/notification";
 
 export const AdvertListItem = ({
   src,
@@ -67,12 +68,14 @@ export const AdvertListItem = ({
     const id = Number(selectedAdvert.dataset.id);
     if (selectedAdvert.classList.contains("favorite")) {
       selectedAdvert.classList.remove("favorite");
+      toastSuccess(`Remove from your favorite`);
       setFavorite(false);
       dispatch(removeFromFavorite(id));
       return;
     }
     const advert = adverts.find((advert) => advert.id === id);
     selectedAdvert.classList.add("favorite");
+    toastSuccess(`Added to your favorite`);
     setFavorite(true);
     dispatch(addFavorite(advert));
   };
