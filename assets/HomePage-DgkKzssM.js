@@ -1,15 +1,15 @@
-import{q as o,L as t,j as e}from"./index-Qjs-ITYa.js";const n=o.div`
+import{q as e,L as n,j as o,C as t}from"./index-BxvCDGsT.js";const r=e.div`
   max-width: 800px;
   padding: 21px 10px;
   text-align: left;
-`,r=o.h1`
+`,i=e.h1`
   margin-bottom: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.2;
   color: #595959;
-`,i=o.p`
+`,s=e.p`
   max-width: 600px;
   margin-bottom: 60px;
   font-family: "Lato", sans-serif;
@@ -17,7 +17,7 @@ import{q as o,L as t,j as e}from"./index-Qjs-ITYa.js";const n=o.div`
   font-size: 20px;
   line-height: 1.2;
   color: #737373;
-`,s=o(t)`
+`,c=e(n)`
   border-radius: 12px;
   padding: 16px 50px;
   background: #3470ff;
@@ -32,14 +32,14 @@ import{q as o,L as t,j as e}from"./index-Qjs-ITYa.js";const n=o.div`
   &:focus {
     background: #0b44cd;
   }
-`,c=()=>e.jsxs(n,{children:[e.jsx(r,{children:"We Have Prepared a Car For Your Trip "}),e.jsx(i,{children:"We have many types of cars that are ready for you to travel anywhere and anytime."}),e.jsx(s,{to:"/catalog",children:"Get your car"})]});o.div`
+`,p=()=>o.jsxs(r,{children:[o.jsx(i,{children:"We Have Prepared a Car For Your Trip "}),o.jsx(s,{children:"We have many types of cars that are ready for you to travel anywhere and anytime."}),o.jsx(c,{to:"/catalog",children:"Get your car"})]});e.div`
   max-width: 790px;
   margin-left: auto;
-`;o.div``;const p=o.section`
+`;e.div``;const d=e.section`
   padding-top: 120px;
   padding-bottom: 175px;
   background-image: ${a=>`url(${a.backgroundImageCar})`},
     ${a=>`url(${a.backgroundImageMap})`};
   background-repeat: no-repeat;
   background-position: bottom right, top right;
-`,d="/car-rental-app/assets/map-CV0Fwig1.png",g="/car-rental-app/assets/car_home-CnFTMQka.png",f=()=>e.jsxs(p,{backgroundImageMap:d,backgroundImageCar:g,children:[e.jsx(c,{}),";"]});export{f as default};
+`,g="/car-rental-app/assets/map-CV0Fwig1.png",m="/car-rental-app/assets/car_home-CnFTMQka.png",l=()=>o.jsx(t,{children:o.jsxs(d,{backgroundImageMap:g,backgroundImageCar:m,children:[o.jsx(p,{}),";"]})});export{l as default};
