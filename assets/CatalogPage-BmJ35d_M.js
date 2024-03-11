@@ -1,4 +1,4 @@
-import{q as st,j as U,r as h,m as Wn,R as Ct,a as Gn,u as Jt,b as q,s as wt,c as Yn,d as qn,e as Kn,g as Xn,f as Zn,h as Jn,i as xt}from"./index-CXgrFzWv.js";import{s as Qn,a as er,b as tr,c as nr,d as rr,e as ir,f as or,S as ar,A as sr,M as ur,g as lr}from"./Section.styled-sJWDhcbi.js";const cr=st.button`
+import{q as st,j as U,r as h,m as Wn,R as Ct,a as Gn,u as Jt,b as q,s as wt,c as Yn,d as qn,e as Kn,g as Xn,f as Zn,h as Jn,i as xt}from"./index-CrxTv9N_.js";import{s as Qn,a as er,b as tr,c as nr,d as rr,e as ir,f as or,S as ar,A as sr,M as ur,g as lr}from"./Section.styled-C6F0yLAc.js";const cr=st.button`
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 16px;
@@ -8,6 +8,8 @@ import{q as st,j as U,r as h,m as Wn,R as Ct,a as Gn,u as Jt,b as q,s as wt,c as
   color: #3470ff;
   background-color: transparent;
   border: none;
+  display: block;
+  margin: 0 auto;
 
   &:hover,
   &:focus {

@@ -1,4 +1,4 @@
-import{q as w,k as R,u as Ve,r as F,b as he,j as o,o as Ue,l as Ze,n as qe,c as He,p as fe}from"./index-CXgrFzWv.js";const Ye=e=>e.adverts.adverts,Je=e=>e.adverts.favoriteAdverts,nr=e=>e.adverts.isLoading,ar=e=>e.adverts.isLoadMore,ir=e=>e.adverts.totalAdverts,or=e=>e.adverts.limit,Qe=w.li`
+import{q as w,k as R,u as Ve,r as F,b as he,j as o,o as Ue,l as Ze,n as qe,c as He,p as fe}from"./index-CrxTv9N_.js";const Ye=e=>e.adverts.adverts,Je=e=>e.adverts.favoriteAdverts,nr=e=>e.adverts.isLoading,ar=e=>e.adverts.isLoadMore,ir=e=>e.adverts.totalAdverts,or=e=>e.adverts.limit,Qe=w.li`
   position: relative;
   border-radius: 14px;
 `,Xe=w.div`
@@ -172,7 +172,7 @@ import{q as w,k as R,u as Ve,r as F,b as he,j as o,o as Ue,l as Ze,n as qe,c as 
   max-width: calc(100vw - 256px);
   grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
   grid-gap: 50px 29px;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   padding: 0;
   list-style: none;
   margin-left: auto;
