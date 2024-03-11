@@ -1,4 +1,4 @@
-import{q as y,o as K,u as Ve,r as R,b as he,j as i,n as Ue,p as Ze,t as qe,d as He,v as de}from"./index-DX3yAmo-.js";const Ye=e=>e.adverts.adverts,Je=e=>e.adverts.favoriteAdverts,ar=e=>e.adverts.isLoading,ir=e=>e.adverts.isLoadMore,or=e=>e.adverts.totalAdverts,sr=e=>e.adverts.limit,Qe=y.li`
+import{q as y,o as K,u as Ve,r as R,b as he,j as i,n as Ue,p as Ze,t as qe,d as He,v as de}from"./index-CC-iMgaD.js";const Ye=e=>e.adverts.adverts,Je=e=>e.adverts.favoriteAdverts,ar=e=>e.adverts.isLoading,ir=e=>e.adverts.isLoadMore,or=e=>e.adverts.totalAdverts,sr=e=>e.adverts.limit,Qe=y.li`
   position: relative;
   border-radius: 14px;
 `,Xe=y.div`
