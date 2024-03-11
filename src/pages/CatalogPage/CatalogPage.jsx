@@ -26,6 +26,7 @@ import { getMakes } from "../../redux/filters/filtersOperations";
 import { selectMake } from "../../redux/filters/filtersSelectors";
 import { AdvertSeacrh } from "../../components/AdvertSearch/AdvertSearch";
 import { Section } from "../../components/Section/Section.styled";
+import { Loader } from "../../components/Loader/Loader";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -75,7 +76,8 @@ const CatalogPage = () => {
     <>
       <Section>
         <AdvertSeacrh />
-        <AdvertsList adverts={adverts} />
+        {isLoading && <Loader />}
+        {adverts.length !== 0 && <AdvertsList adverts={adverts} />}
         {isOpen && (
           <Modal>
             <AdvertModalContent data={modalContent} />
