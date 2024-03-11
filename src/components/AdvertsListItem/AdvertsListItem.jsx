@@ -131,13 +131,10 @@ export const AdvertListItem = ({
         <IconContext.Provider
           value={{
             size: "18px",
-            color: "",
           }}
         >
           {favorite ? (
-            <MdFavorite
-              style={{ fill: "#3470ff", strokeWidth: "1px", stroke: "#3470ff" }}
-            />
+            <MdFavorite style={{ fill: "#3470ff", stroke: "#3470ff" }} />
           ) : (
             <MdFavoriteBorder style={{ fill: "rgba(255, 255, 255, 0.8)" }} />
           )}
