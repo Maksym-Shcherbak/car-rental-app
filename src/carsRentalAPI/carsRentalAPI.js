@@ -35,20 +35,6 @@ export class carsRentalAPI {
     }
   }
 
-  async searchCocktails(key) {
-    const searchParams = new URLSearchParams({
-      [key]: this.searchRequest,
-    });
-    try {
-      const response = await axios(
-        `${this.#BASE_URL}cocktails/search/?${searchParams}`
-      );
-      return response.data;
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
-
   get query() {
     return this.searchRequest;
   }
