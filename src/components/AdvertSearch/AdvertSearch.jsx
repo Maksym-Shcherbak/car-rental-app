@@ -3,6 +3,7 @@ import { CustomSelect } from "../Select/Select";
 import { CustomLabel, SearchContainer } from "./AdvertSearch.styled";
 import { selectMake, selectMakes } from "../../redux/filters/filtersSelectors";
 import { setMake } from "../../redux/filters/filtersSlice";
+import { AdvertSeacrhForm } from "../AdvertSearchForm/AdvertSearchForm";
 
 export const AdvertSeacrh = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ export const AdvertSeacrh = () => {
           value={defaultValue}
         />
       </div>
+      <AdvertSeacrhForm />
     </SearchContainer>
   );
 };

@@ -98,6 +98,7 @@ export const CustomSelect = ({
   isClearable,
   id,
   value,
+  name,
 }) => {
   return (
     <Select
@@ -108,6 +109,7 @@ export const CustomSelect = ({
       placeholder={placeholder}
       isClearable={isClearable}
       inputId={id}
+      name={name}
     />
   );
 };

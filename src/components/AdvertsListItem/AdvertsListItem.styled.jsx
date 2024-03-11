@@ -58,6 +58,7 @@ export const AdvertButton = styled.button`
   line-height: 1.42857;
   color: #fff;
   border: none;
+  margin-top: 28px;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -79,4 +80,8 @@ export const FavoriteButton = styled.button`
   border: none;
   pointer-events: auto;
   overflow: hidden;
+`;
+
+export const Features = styled.div`
+  height: 64px;
 `;

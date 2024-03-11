@@ -1,4 +1,3 @@
-// export const getRentalCars = (state) => state.rentalCars;
 export const selectAdverts = (state) => state.adverts.adverts;
 export const selectFavoriteAdverts = (state) => state.adverts.favoriteAdverts;
 export const selectIsLoading = (state) => state.adverts.isLoading;

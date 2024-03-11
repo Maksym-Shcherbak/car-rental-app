@@ -15,6 +15,11 @@ export const AdvertsList = ({ adverts }) => {
             price={advert.rentalPrice}
             id={advert.id}
             model={advert.model}
+            address={advert.address}
+            functionalities={advert.functionalities}
+            type={advert.type}
+            rentalCompany={advert.rentalCompany}
+            accessories={advert.accessories}
           />
         );
       })}

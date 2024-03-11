@@ -8,6 +8,7 @@ import {
   AdvertTitle,
   CarImage,
   FavoriteButton,
+  Features,
   GridItem,
   ImageWrapper,
   TitleAndPriceWrapper,
@@ -24,16 +25,33 @@ import {
   removeFromFavorite,
 } from "../../redux/rental/cars/carsSlice";
 import { useEffect, useState } from "react";
-import { AdvertTitleSpan } from "../AdvertModalContent/AdvertModalContent.styled";
+import {
+  AdvertTitleSpan,
+  ModalContentItem,
+  ModalContentList,
+  ModalListContent,
+} from "../AdvertModalContent/AdvertModalContent.styled";
 
-export const AdvertListItem = ({ src, make, model, year, price, id }) => {
+export const AdvertListItem = ({
+  src,
+  make,
+  model,
+  year,
+  price,
+  rentalCompany,
+  address,
+  type,
+  functionalities,
+  id,
+  accessories,
+}) => {
   const newPrice = `${price.slice(1)}${price.slice(0, 1)}`;
   const isModelShow = model.length <= 5 ? model : null;
   const dispatch = useDispatch();
   const [favorite, setFavorite] = useState(false);
   const adverts = useSelector(selectAdverts);
   const favoriteAdverts = useSelector(selectFavoriteAdverts);
-
+  const [_, city, country] = address.split(",");
   const onClickButtonLearn = (e) => {
     const id = e.target.closest("li").dataset.id;
     let advert = adverts.find((advert) => advert.id === Number(id));
@@ -78,6 +96,33 @@ export const AdvertListItem = ({ src, make, model, year, price, id }) => {
           </AdvertTitle>
           <AdvertPrice>{newPrice}</AdvertPrice>
         </TitleAndPriceWrapper>
+        <Features>
+          <ModalContentList>
+            <ModalContentItem>
+              <ModalListContent> {city}</ModalListContent>
+            </ModalContentItem>
+            <ModalContentItem>
+              <ModalListContent> {country}</ModalListContent>
+            </ModalContentItem>
+            <ModalContentItem>
+              <ModalListContent>{rentalCompany}</ModalListContent>
+            </ModalContentItem>
+          </ModalContentList>
+          <ModalContentList>
+            <ModalContentItem>
+              <ModalListContent>{type}</ModalListContent>
+            </ModalContentItem>
+            <ModalContentItem>
+              <ModalListContent> {make}</ModalListContent>
+            </ModalContentItem>
+            <ModalContentItem>
+              <ModalListContent> {id}</ModalListContent>
+            </ModalContentItem>
+            <ModalContentItem>
+              <ModalListContent>{functionalities[1]}</ModalListContent>
+            </ModalContentItem>
+          </ModalContentList>
+        </Features>
         <AdvertButton onClick={onClickButtonLearn}>Learn more</AdvertButton>
       </AdvertInfo>
       <FavoriteButton onClick={onClickFavoriteButton}>

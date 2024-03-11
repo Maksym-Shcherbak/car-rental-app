@@ -63,7 +63,9 @@ export const ModalContentList = styled.ul`
   align-items: center;
   padding: 0;
   margin: 0;
-  margin-bottom: 4px;
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
 `;
 
 export const ModalContentItem = styled.li`
@@ -98,7 +100,7 @@ export const ConditionsList = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 4px 6px;
+  gap: 6px 4px;
   list-style: none;
   justify-content: flex-start;
   align-items: center;

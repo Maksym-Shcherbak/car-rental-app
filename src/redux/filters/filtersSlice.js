@@ -4,6 +4,9 @@ import { getMakes } from "./filtersOperations";
 const filtersInitialState = {
   makes: [],
   make: null,
+  query: {
+    maxRentalPrice: "",
+  },
   error: null,
   isLoading: false,
 };
@@ -24,7 +27,12 @@ const filtersSlice = createSlice({
     setMake(state, action) {
       state.make = action.payload;
     },
+
+    setMaxRentalPrice(state, action) {
+      state.query.maxRentalPrice = action.payload;
+    },
   },
+
   extraReducers: (builder) =>
     builder
       .addCase(getMakes.fulfilled, (state, { payload }) => {
@@ -38,4 +46,4 @@ const filtersSlice = createSlice({
 
 export const filtersReducer = filtersSlice.reducer;
 
-export const { setMake } = filtersSlice.actions;
+export const { setMake, setMaxRentalPrice } = filtersSlice.actions;
