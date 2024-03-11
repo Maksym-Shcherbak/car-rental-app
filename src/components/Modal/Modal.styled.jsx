@@ -21,12 +21,20 @@ export const ModalWindow = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f8f9ff;
+  min-width: 320px;
   max-width: 541px;
-  max-height: 90vh;
+  max-height: 100vh;
   padding: 40px;
   border-radius: 20px;
   text-align: left;
   overflow: hidden;
+`;
+
+export const ModalContent = styled.div`
+  width: 105%;
+  height: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
 `;
 
 export const CloseBtn = styled.button`

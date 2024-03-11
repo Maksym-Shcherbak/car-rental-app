@@ -1,10 +1,18 @@
 import styled from "styled-components";
 
 export const StyledSearchForm = styled.form`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 18px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+  }
+`;
+
+export const SelectWrapper = styled.div`
+  @media screen and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const SearchButton = styled.button`

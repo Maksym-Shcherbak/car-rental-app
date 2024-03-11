@@ -2,7 +2,11 @@ import { useFormik } from "formik";
 import { CustomSelect } from "../Select/Select";
 import { CustomLabel } from "../AdvertSearch/AdvertSearch.styled";
 import { useDispatch, useSelector } from "react-redux";
-import { SearchButton, StyledSearchForm } from "./AdvertSearchForm.styled";
+import {
+  SearchButton,
+  SelectWrapper,
+  StyledSearchForm,
+} from "./AdvertSearchForm.styled";
 import { setMaxRentalPrice } from "../../redux/filters/filtersSlice";
 import { getAllAdverts } from "../../redux/rental/cars/carsOperations";
 import { selectMake } from "../../redux/filters/filtersSelectors";
@@ -43,7 +47,7 @@ export const AdvertSeacrhForm = () => {
   };
   return (
     <StyledSearchForm onSubmit={formik.handleSubmit}>
-      <div>
+      <SelectWrapper>
         <CustomLabel htmlFor="maxRentalPrice">Price/ 1 hour</CustomLabel>
         <CustomSelect
           id={"maxRentalPrice"}
@@ -54,7 +58,7 @@ export const AdvertSeacrhForm = () => {
           isClearable={true}
           value={formik.values.maxRentalPrice}
         />
-      </div>
+      </SelectWrapper>
       <SearchButton type="submit">Search</SearchButton>
     </StyledSearchForm>
   );
