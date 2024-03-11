@@ -1,12 +1,16 @@
 import { useFormik } from "formik";
 import { CustomSelect } from "../Select/Select";
 import { CustomLabel } from "../AdvertSearch/AdvertSearch.styled";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SearchButton, StyledSearchForm } from "./AdvertSearchForm.styled";
 import { setMaxRentalPrice } from "../../redux/filters/filtersSlice";
+import { getAllAdverts } from "../../redux/rental/cars/carsOperations";
+import { selectMake } from "../../redux/filters/filtersSelectors";
+import { resetAdverts } from "../../redux/rental/cars/carsSlice";
 
 export const AdvertSeacrhForm = () => {
   const dispatch = useDispatch();
+  const make = useSelector(selectMake);
   let priceOptions = [];
   const makeOptions = () => {
     for (let i = 30; i <= 300; i += 10) {
@@ -24,8 +28,9 @@ export const AdvertSeacrhForm = () => {
       maxRentalPrice: "",
     },
     onSubmit: (values) => {
-      console.log(values.maxRentalPrice);
       dispatch(setMaxRentalPrice(values.maxRentalPrice));
+      dispatch(resetAdverts());
+      dispatch(getAllAdverts({ make }));
     },
   });
 

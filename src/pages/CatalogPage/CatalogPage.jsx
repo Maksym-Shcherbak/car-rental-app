@@ -11,6 +11,7 @@ import {
   selectIsLoading,
   selectLimit,
   selectTotalAdverts,
+  selectVisibleContacts,
 } from "../../redux/rental/cars/carsSelectors";
 import { AdvertsList } from "../../components/AdvertsList/AdvertsList";
 import { Modal } from "../../components/Modal/Modal";
@@ -42,6 +43,7 @@ const CatalogPage = () => {
   const totalAdverts = useSelector(selectTotalAdverts);
   const isLoadMore = useSelector(selectIsLoadMore);
   const make = useSelector(selectMake);
+  const filteredAdverts = useSelector(selectVisibleContacts);
 
   useEffect(() => {
     setFavorite(favoriteAdverts);
@@ -81,7 +83,9 @@ const CatalogPage = () => {
         <Container>
           <AdvertSeacrh />
           {isLoading && <Loader />}
-          {adverts.length !== 0 && <AdvertsList adverts={adverts} />}
+          {filteredAdverts.length !== 0 && (
+            <AdvertsList adverts={filteredAdverts} />
+          )}
           {isOpen && (
             <Modal>
               <AdvertModalContent data={modalContent} />
