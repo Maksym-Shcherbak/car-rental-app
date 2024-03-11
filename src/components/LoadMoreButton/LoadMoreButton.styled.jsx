@@ -9,6 +9,8 @@ export const ButtonMore = styled.button`
   color: #3470ff;
   background-color: transparent;
   border: none;
+  display: block;
+  margin: 0 auto;
 
   &:hover,
   &:focus {

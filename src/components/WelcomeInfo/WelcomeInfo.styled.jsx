@@ -35,4 +35,10 @@ export const WelcomeInfoLink = styled(Link)`
   font-size: 14px;
   line-height: 1.42857;
   color: #fff;
+  text-decoration: none;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background: #0b44cd;
+  }
 `;
