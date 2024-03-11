@@ -41,7 +41,7 @@ export const AdvertModalContent = ({ data }) => {
   return (
     <>
       <ImageWrapper>
-        <CarImage src={data.img} />
+        <CarImage src={data.img} alt={data.model} loading="lazy" />
       </ImageWrapper>
       <GeneralInfo>
         <AdvertTitle>

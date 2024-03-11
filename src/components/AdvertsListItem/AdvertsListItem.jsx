@@ -43,7 +43,6 @@ export const AdvertListItem = ({
   type,
   functionalities,
   id,
-  accessories,
 }) => {
   const newPrice = `${price.slice(1)}${price.slice(0, 1)}`;
   const isModelShow = model.length <= 5 ? model : null;
@@ -87,7 +86,7 @@ export const AdvertListItem = ({
   return (
     <GridItem data-id={id}>
       <ImageWrapper>
-        <CarImage src={src} />
+        <CarImage src={src} alt={model} loading="lazy" />
       </ImageWrapper>
       <AdvertInfo>
         <TitleAndPriceWrapper>

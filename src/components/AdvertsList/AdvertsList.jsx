@@ -19,7 +19,6 @@ export const AdvertsList = ({ adverts }) => {
             functionalities={advert.functionalities}
             type={advert.type}
             rentalCompany={advert.rentalCompany}
-            accessories={advert.accessories}
           />
         );
       })}
