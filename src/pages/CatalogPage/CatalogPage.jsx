@@ -28,6 +28,7 @@ import { AdvertSeacrh } from "../../components/AdvertSearch/AdvertSearch";
 import { Section } from "../../components/Section/Section.styled";
 import { Loader } from "../../components/Loader/Loader";
 import { toastSuccess } from "../../helpers/notification";
+import { Container } from "../../components/Container/Container.styled";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -77,17 +78,22 @@ const CatalogPage = () => {
   return (
     <>
       <Section>
-        <AdvertSeacrh />
-        {isLoading && <Loader />}
-        {adverts.length !== 0 && <AdvertsList adverts={adverts} />}
-        {isOpen && (
-          <Modal>
-            <AdvertModalContent data={modalContent} />
-          </Modal>
-        )}
-        {isLoadMore && !isLoading && (
-          <LoadMoreButton onButtonClick={onChangePage} isLoading={isLoading} />
-        )}
+        <Container>
+          <AdvertSeacrh />
+          {isLoading && <Loader />}
+          {adverts.length !== 0 && <AdvertsList adverts={adverts} />}
+          {isOpen && (
+            <Modal>
+              <AdvertModalContent data={modalContent} />
+            </Modal>
+          )}
+          {isLoadMore && !isLoading && (
+            <LoadMoreButton
+              onButtonClick={onChangePage}
+              isLoading={isLoading}
+            />
+          )}
+        </Container>
       </Section>
     </>
   );
