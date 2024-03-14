@@ -5,13 +5,13 @@ Welcome to the Car rental App. This web application allows users to choose the m
 <img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="100"/>
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/Maksym-Shcherbak/car-rental-app)](https://github.com/Maksym-Shcherbak/car-rental-app/commits/main/)
-[![Vite](https://img.shields.io/badge/Vite-5.0.8-6868F2)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.1.4-6868F2)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.2.0-51CAEF.svg)](https://reactjs.org/)
-[![Styled Components](https://img.shields.io/badge/Styled_Components-6.1.6-D664C0.svg)](https://styled-components.com/)
-[![Axios](https://img.shields.io/badge/Axios-1.6.4-5300D8.svg)](https://github.com/axios/axios)
+[![Styled Components](https://img.shields.io/badge/Styled_Components-5.3.11-D664C0.svg)](https://styled-components.com/)
+[![Axios](https://img.shields.io/badge/Axios-1.6.7-5300D8.svg)](https://github.com/axios/axios)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Latest-EAD319.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![React Icons](https://img.shields.io/badge/React_Icons-4.12.0-E10051.svg)](https://react-icons.github.io/react-icons/)
-[![Framer motion](https://img.shields.io/badge/Framer%20Motion-v1.0-blue?style=for-the-badge)](https://www.framer.com/motion/?utm_source=motion-readme-docs)
+[![React Icons](https://img.shields.io/badge/React_Icons-5.0.1-E10051.svg)](https://react-icons.github.io/react-icons/)
+[![Framer motion](https://img.shields.io/badge/Framer%20Motion-v11.0.12-blue)](https://www.framer.com/motion/?utm_source=motion-readme-docs)
 
 ## Table of Contents
 
