@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const GridItem = styled.li`
   position: relative;
@@ -66,7 +67,7 @@ export const AdvertButton = styled.button`
   }
 `;
 
-export const FavoriteButton = styled.button`
+export const FavoriteButton = styled(motion.button)`
   width: 18px;
   height: 18px;
   position: absolute;

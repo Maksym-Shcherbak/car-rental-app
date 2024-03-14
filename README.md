@@ -11,6 +11,7 @@ Welcome to the Car rental App. This web application allows users to choose the m
 [![Axios](https://img.shields.io/badge/Axios-1.6.4-5300D8.svg)](https://github.com/axios/axios)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Latest-EAD319.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![React Icons](https://img.shields.io/badge/React_Icons-4.12.0-E10051.svg)](https://react-icons.github.io/react-icons/)
+[![Framer motion](https://img.shields.io/npm/v/framer-motion.svg?style=flat-square)](https://www.framer.com/motion/?utm_source=motion-readme-docs)
 
 ## Table of Contents
 
@@ -50,6 +51,10 @@ Welcome to the Car rental App. This web application allows users to choose the m
   - Modern Normalize (Modern version of Normalize.css)
   - React Loader
   - React Toastify (Notification library)
+  - Framer motion
+
+- **Backend:**
+  - mockapi
 
 ## Getting Started
 

@@ -15,15 +15,11 @@ import { advertsReducer } from "./rental/cars/carsSlice";
 import { modalReducer } from "./modal/modalSlice";
 import { filtersReducer } from "./filters/filtersSlice";
 
-// import { devToolsEnhancer } from "@redux-devtools/extension";
-
 const persistConfig = {
   key: "adverts",
   storage,
   whitelist: ["favoriteAdverts"],
 };
-
-// const enhancer = devToolsEnhancer();
 
 export const store = configureStore({
   reducer: {

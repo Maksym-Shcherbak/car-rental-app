@@ -32,6 +32,7 @@ import {
   ModalListContent,
 } from "../AdvertModalContent/AdvertModalContent.styled";
 import { toastSuccess } from "../../helpers/notification";
+import { motion } from "framer-motion";
 
 export const AdvertListItem = ({
   src,
@@ -127,7 +128,11 @@ export const AdvertListItem = ({
         </Features>
         <AdvertButton onClick={onClickButtonLearn}>Learn more</AdvertButton>
       </AdvertInfo>
-      <FavoriteButton onClick={onClickFavoriteButton}>
+      <FavoriteButton
+        whileTap={{ scale: 3 }}
+        transition={{ duration: 0.5 }}
+        onClick={onClickFavoriteButton}
+      >
         <IconContext.Provider
           value={{
             size: "18px",

@@ -15,10 +15,7 @@ import {
 } from "../../redux/rental/cars/carsSelectors";
 import { AdvertsList } from "../../components/AdvertsList/AdvertsList";
 import { Modal } from "../../components/Modal/Modal";
-import {
-  selectModalIsOpen,
-  selectModalModalContent,
-} from "../../redux/modal/modalSlice";
+import { selectModalModalContent } from "../../redux/modal/modalSlice";
 import { resetAdverts, setIsLoadMore } from "../../redux/rental/cars/carsSlice";
 import { LoadMoreButton } from "../../components/LoadMoreButton/LoadMoreButton";
 import { AdvertModalContent } from "../../components/AdvertModalContent/AdvertModalContent";
@@ -35,7 +32,6 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const limit = useSelector(selectLimit);
-  const isOpen = useSelector(selectModalIsOpen);
   const modalContent = useSelector(selectModalModalContent);
   const isLoading = useSelector(selectIsLoading);
   const adverts = useSelector(selectAdverts);
@@ -86,11 +82,9 @@ const CatalogPage = () => {
           {filteredAdverts.length !== 0 && (
             <AdvertsList adverts={filteredAdverts} />
           )}
-          {isOpen && (
-            <Modal>
-              <AdvertModalContent data={modalContent} />
-            </Modal>
-          )}
+          <Modal>
+            <AdvertModalContent data={modalContent} />
+          </Modal>
           {isLoadMore && !isLoading && (
             <LoadMoreButton
               onButtonClick={onChangePage}
