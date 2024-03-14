@@ -1,0 +1,1 @@
+import{b as s,f as r,r as o,j as t,C as n}from"./index-CI7ZC4o_.js";import{e as d,i,S as c,A as l,M as x,j}from"./Section.styled-CoS-o4D_.js";const m=()=>{const a=s(r),e=s(d);return o.useEffect(()=>{i(e)}),t.jsx(t.Fragment,{children:t.jsx(c,{children:t.jsxs(n,{children:[t.jsx(l,{adverts:e}),t.jsx(x,{children:t.jsx(j,{data:a})})]})})})};export{m as default};
